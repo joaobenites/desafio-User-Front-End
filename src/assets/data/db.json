@@ -1,0 +1,37 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "username": "development",
+      "password": "323123",
+      "is_enabled": "TRUE",
+      "register_date": "12-01-2000-12-34",
+      "name": "teste",
+      "surname": "dev",
+      "email": "teste@dev.com",
+      "phone": "+5548988090881"
+    },
+    {
+      "id": 2,
+      "username": "joaof",
+      "password": "324423",
+      "is_enabled": "TRUE",
+      "register_date": "09-10-2010-12-34",
+      "name": "joao",
+      "surname": "felipe",
+      "email": "joaofelipe@dev.com",
+      "phone": "+5551999532451"
+    },
+    {
+      "id": 3,
+      "username": "devTeste",
+      "password": "11122233",
+	  "is_enabled": "False",
+      "register_date": "09-10-2010-12-34",
+      "name": "dev",
+      "surname": "test",
+      "email": "development@dev.com",
+      "phone": "+5548668855443"
+    }
+  ]
+}
