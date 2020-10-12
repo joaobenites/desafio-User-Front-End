@@ -16,7 +16,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { MenuComponent } from './menu/menu.component';
-
+import { ReactiveFormsModule } from '@angular/forms'
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +39,11 @@ import { MenuComponent } from './menu/menu.component';
     MatInputModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatSnackBarModule,
+    MatSelectModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
