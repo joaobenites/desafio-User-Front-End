@@ -1,8 +1,55 @@
 <mat-card class="example-card">
     <mat-card-header>
-        <mat-card-title>Home</mat-card-title>
+        <mat-card-title *ngIf="!data">Criar Usuário</mat-card-title>
+        <mat-card-title *ngIf="data">Editar Usuário</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    
+    <div class="example-container">
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Usuário</mat-label>
+        <input matInput   formControlName="username">
+      </mat-form-field>
+      <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Senha</mat-label>
+          <input matInput   formControlName="password">
+        </mat-form-field>
+        <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Select me</mat-label>
+        <mat-select formControlName="is_enabled">
+          <mat-option [value]="true" value="true">Ativo</mat-option>
+          <mat-option [value]="false" value="false">Inativo</mat-option>
+        </mat-select>
+      </mat-form-field>
+        <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Nome</mat-label>
+        <input matInput   formControlName="name">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Sobrenome</mat-label>
+        <input matInput   formControlName="surname">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput   formControlName="email">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Fone</mat-label>
+        <input matInput   formControlName="phone">
+      </mat-form-field>
+      <br>
+      <button type="submit" class="btn btn-default"
+             [disabled]="userForm.invalid">Enviar</button>
+             &nbsp;&nbsp;
+      <button type="button" class="btn btn-default"
+             (click)="formDir.resetForm({})">Resetar</button>
+    </form>
+    </div>
   </mat-card-content>
 </mat-card>
